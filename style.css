@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color:aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .container{
+      width: 100vw;
+      height:100vh;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: 60px 1fr 1fr 1fr 1fr;
+  }
+  .grid{
+    color: aliceblue;
+    padding: 7px;
+  }
+  .header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo h1{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #000;
+  }
+  ul{
+    display: flex;
+    padding: 10px;
+  }
+  ul li{
+    list-style: none;
+    padding: 10px;
+  }
+  ul li a{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+  }
+  aside.aside{
+    display: none;
+  }
+  .img{
+    grid-column-start: 1;
+    grid-column-end:3 ;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .img img{
+    width: 100%;
+    height: 100%;
+  }
+  .new{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background-color: rgb(3, 1, 27);
+  }
+  .content1{
+    padding: 0.8rem 0rem 0.6rem 0.5rem;
+    color: aliceblue;
+  }
+  .content1 p{
+    padding: 0.8rem 0px;
+    color: aliceblue;
+  }
+  .content2{
+    color: aliceblue;
+    padding: 0.8rem 0rem 0.6rem 0.5rem;
+  }
+  .content2 p{
+    padding: 0.7rem 0px;
+    color: aliceblue;
+  }
+  .content3{
+    padding: 0.8rem 0rem 0.6rem 0.5rem;
+    color: aliceblue;
+  }
+  .content3 p{
+    padding: 0.8rem 0px;
+    color: aliceblue;
+  }
+  .new h1{
+    padding:3px;
+    color: goldenrod;
+  }
+  .text1{
+    font-size: 1.2rem;
+    font-weight:700;
+    text-transform: capitalize;
+    color: #000;
+  }
+  .text2 p{
+    padding: 4px;
+    font-size: 12.5px;
+    color: #000;
+  }
+  .text2 button{
+    margin-top: 2rem;
+    height: 38px;
+    width: 160px;
+    background-color: rgb(220, 43, 20);
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 15px;
+    padding: 5px;
+    letter-spacing:3px;
+  }
+  .text3 h2,.text4 h2,.text5 h2{
+    color: grey;
+    padding: 0.4rem;
+  }
+  .text3 .imgCard1,.text4 .imgCard2,.text5 .imgCard3{
+    display: flex;
+    color: #000;
+  }.text3 .imgCard1 img,.text4 .imgCard2 img,.text5 .imgCard3 img{
+    height: 150px;
+    width: 120px;
+    margin-right: 1rem;
+  }
+  @media screen and (max-width:600px){
+    .container{
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+  }
+    .header{
+      width: 100%;
+      height: 80px;
+      background-color:aliceblue;
+    }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    .logo{
+      padding: 0px 0px 8px;
+    }
+    ul{
+      display: flex;
+      padding: 4px 0px;
+    }
+    .menuList{
+      display: none;
+    }
+    aside.aside{
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0%;
+      background-color: aliceblue;
+      transition:all 0.5s;
+    }
+    .menuBar{
+      position: fixed;
+      top: 2vh;
+      right: 15px;
+    }
+    .openMenu p{
+      height: 4px;
+      width: 33px;
+      background-color: rgb(22, 19, 19);
+      margin: 5px;
+      border-radius: 5px;
+    }
+    .menus{
+      height: 100vh;
+      width: 100%;
+    }
+    .menus ul{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    .menus ul li:nth-child(1){
+      position: absolute;
+      top: -5px;
+      left: 0px;
+      color: #000;
+      font-size: 20px;
+  
+    }
+    .menus ul li:nth-child(2){
+      padding-top: 8rem;
+    }
+    .menus ul li{
+      padding: 1.5rem;
+    }
+    .menus ul li a{
+      color:#000;
+      font-size: 15px;
+    }
+    .img{
+      height: 25rem;
+      width: 100%;
+    }
+    .new{
+      margin-top: 1.5rem;
+      width: 100%;
+      height: 35rem;
+    }
+    .content1{
+      padding: 2rem 0rem 1.5rem 1rem;
+      color: aliceblue;
+    }
+    .content1 p{
+      padding: 0.8rem 0px;
+      color: aliceblue;
+    }
+    .content2{
+      color: aliceblue;
+      padding: 2rem 0rem 1.5rem 1rem;
+    }
+    .content2 p{
+      padding: 0.8rem 0px;
+      color: aliceblue;
+    }
+    .content3{
+      padding: 2rem 0rem 1.5rem 1rem;
+      color: aliceblue;
+    }
+    .content3 p{
+      padding: 0.8rem 0px;
+      color: aliceblue;
+    }
+    .new h1{
+      padding: 5px;
+      color: goldenrod;
+    }
+    .text1{
+      height: 7rem;
+      width: 60%;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .text2{
+      height: 10rem;
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text3,.text4,.text5{
+      height: 100%;
+      width: 100%;
+      margin: 1.5rem;
+  }.text3 p,.text4 p,.text5 p{
+    padding: 0.5rem 0rem;
+  }.text3 .imgCard1,.text4 .imgCard2,.text5 .imgCard3{
+    display: flex;
+    color: #000;
+  }.text3 .imgCard1 img,.text4 .imgCard2 img,.text5 .imgCard3 img{
+    height: 150px;
+    width: 120px;
+    margin-right: 1rem;
+  }
+  }
